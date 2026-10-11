@@ -3,6 +3,8 @@
 
 An educational React application for tracking income and expenses through a simple financial dashboard. Developed as part of my Full Stack Web Development training at **Kenzie Academy Brasil**.
 
+**[Live Demo](https://entrega-nukenzie-pedro-8nvfucdqj-pedrohenriquebarrosn.vercel.app/)**
+
 ## Overview
 
 NuKenzie is a front-end application designed to help users organize financial transactions and track their current balance.
