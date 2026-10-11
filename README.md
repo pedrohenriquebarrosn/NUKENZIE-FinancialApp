@@ -5,6 +5,8 @@ An educational React application for tracking income and expenses through a simp
 
 **[Live Demo](https://entrega-nukenzie-pedro-8nvfucdqj-pedrohenriquebarrosn.vercel.app/)**
 
+**Demo check (11 October 2026):** The project owner reports that the hosted application opens and that adding and removing transactions work in the browser. This is a user-reported manual check, not an independent or automated end-to-end test.
+
 ## Overview
 
 NuKenzie is a front-end application designed to help users organize financial transactions and track their current balance.
