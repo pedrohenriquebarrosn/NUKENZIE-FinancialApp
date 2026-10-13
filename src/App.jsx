@@ -4,15 +4,13 @@ import { Dashboard } from "./components/dashboard";
 import { StartPage } from "./components/startPage";
 import { v4 as uuidv4 } from "uuid";
 import { LanguageProvider, LanguageSwitcher, useLanguage } from "./i18n";
+import { buildTransaction, calculateBalance } from "./finance";
 
 function AppContent() {
   const { t } = useLanguage();
   const [listTransactions, setListTransactions] = useState([]);
 
-  const totalMoney = listTransactions.reduce(
-    (previusValue, currentValue) => previusValue + currentValue.value,
-    0
-  );
+  const totalMoney = calculateBalance(listTransactions);
 
   const [format, setFormat] = useState({
     description: "",
@@ -22,22 +20,11 @@ function AppContent() {
 
   const submit = (event) => {
     event.preventDefault();
-    if (
-      format.description !== "" &&
-      format.type !== "" &&
-      format.value !== ""
-    ) {
-      const newFormat = { ...format, id: uuidv4() };
-      setListTransactions([...listTransactions, newFormat]);
-      setFormat({
-        description: "",
-        type: "",
-        value: "",
-      });
-      if (newFormat.type === "Despesa") {
-        newFormat.value = newFormat.value * -1;
-      }
-    } else {
+    try {
+      const transaction = buildTransaction(format, uuidv4());
+      setListTransactions(current => [...current, transaction]);
+      setFormat({ description: "", type: "", value: "" });
+    } catch {
       alert(t("Preencha todos os campos"));
     }
   };
