@@ -1,55 +1,50 @@
 # NuKenzie — Personal Finance Tracker
 
-An educational React application for tracking income and expenses through a simple financial dashboard. Developed as part of my Full Stack Web Development training at **Kenzie Academy Brasil**.
+**A streamlined React dashboard for tracking income, expenses, and available balance.**
 
-**[▶ See Project Live ↗](https://entrega-nukenzie-pedro-g9tk-iqgcbph2g.vercel.app/)** — updated preview.
-
-**Version note:** This live preview uses [`review/i18n-pt-en-20261013`](https://github.com/pedrohenriquebarrosn/NUKENZIE-FinancialApp/tree/review/i18n-pt-en-20261013). The default `master` branch may differ until changes are merged. Transactions are browser-session state, not a persistent bank account or backend.
+[**↗ See live preview**](https://entrega-nukenzie-pedro-g9tk-iqgcbph2g.vercel.app/) · [**↗ Code on GitHub**](https://github.com/pedrohenriquebarrosn/NUKENZIE-FinancialApp/tree/review/i18n-pt-en-20261013)
 
 ## Overview
 
-NuKenzie is a front-end application designed to help users organize financial transactions and track their current balance.
+NuKenzie is an interactive financial-tracking project built during Full Stack training and refined as a bilingual portfolio demonstration. It focuses on clear data entry, predictable state updates, and immediate financial feedback.
 
-## Features
+## Key features
 
-- Add income and expense transactions.
-- View transactions with descriptions and amounts.
-- Remove individual transactions.
-- Automatically calculate the current balance.
-- Navigate between a landing page and a financial dashboard.
+- Record income and expenses with a description and amount.
+- View a structured transaction list and delete individual entries.
+- Automatically calculate the total balance from recorded transactions.
+- Validate amount, description, and transaction type.
+- Switch between English and Portuguese in the responsive interface.
+- Navigate between the welcome screen and financial dashboard.
 
-## Technologies
+## Technology stack
 
-- React 18
-- JavaScript
-- Vite
-- CSS
-- UUID
+React 18 · JavaScript · Vite · CSS · React Hooks
 
-## Getting Started
+## Explore and run locally
 
-Clone the repository and install the dependencies:
+The live preview reflects [the updated implementation branch](https://github.com/pedrohenriquebarrosn/NUKENZIE-FinancialApp/tree/review/i18n-pt-en-20261013). The default `master` branch is retained as an earlier project version.
 
 ```bash
+git clone https://github.com/pedrohenriquebarrosn/NUKENZIE-FinancialApp.git
+cd NUKENZIE-FinancialApp
+git switch review/i18n-pt-en-20261013
 npm install
 npm run dev
 ```
 
-Open the local URL displayed by Vite.
+## Engineering and verification
 
-## Technical Highlights
+- Transaction validation and balance calculations were refactored into testable logic.
+- Automated domain checks and production builds passed during code review.
+- The application intentionally keeps transactions in the current React session: refreshing starts a new session, with no bank connection or remote financial-data storage.
 
-- Component-based architecture with React.
-- State management using React Hooks.
-- Dynamic transaction rendering.
-- Derived balance calculations.
-- Form handling and user interaction.
+This is an educational finance interface, not a banking or payment platform.
 
-## Project Scope
+---
 
-This project was developed for educational purposes. Transactions are stored in React state and are not persisted to a database, so information may be lost when the page is refreshed.
+## Author
 
-## Connect
+**Pedro Henrique Barros Nascimento** — Business Administration graduate and Full Stack development alumnus of Kenzie Academy Brasil.
 
-- [LinkedIn](https://www.linkedin.com/in/pedro-henrique-barros-nascimento-2bb684251/)
-- [GitHub Profile](https://github.com/pedrohenriquebarrosn)
+[GitHub profile](https://github.com/pedrohenriquebarrosn) · [LinkedIn](https://www.linkedin.com/in/pedro-henrique-barros-nascimento-2bb684251/)
