@@ -8,7 +8,7 @@ test('Portuguese mobile: create income/expense, validate balance and remove reco
   await page.getByRole('button',{name:'iniciar'}).click();
   const add=async (description,amount,type)=>{
     await page.getByLabel('Descrição').fill(description);
-    await page.getByLabel('Valor').fill(amount);
+    await page.getByLabel('Valor',{exact:true}).fill(amount);
     await page.getByLabel('Tipo de valor').selectOption(type);
     await page.getByRole('button',{name:'Inserir valor'}).click();
   };
