@@ -1,7 +1,7 @@
 name: NuKenzie bilingual preview quality
 on:
   push:
-    branches: [review/i18n-pt-en-20261013]
+    branches: [master, review/i18n-pt-en-20261013]
   workflow_dispatch:
 permissions:
   contents: read
