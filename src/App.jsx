@@ -3,8 +3,10 @@ import "./App.css";
 import { Dashboard } from "./components/dashboard";
 import { StartPage } from "./components/startPage";
 import { v4 as uuidv4 } from "uuid";
+import { LanguageProvider, LanguageSwitcher, useLanguage } from "./i18n";
 
-function App() {
+function AppContent() {
+  const { t } = useLanguage();
   const [listTransactions, setListTransactions] = useState([]);
 
   const totalMoney = listTransactions.reduce(
@@ -36,7 +38,7 @@ function App() {
         newFormat.value = newFormat.value * -1;
       }
     } else {
-      alert("Preencha todos os campos");
+      alert(t("Preencha todos os campos"));
     }
   };
 
@@ -44,6 +46,7 @@ function App() {
 
   return (
     <div className="App">
+      <LanguageSwitcher />
       {page == false ? (
         <StartPage setPage={setPage} />
       ) : (
@@ -61,4 +64,4 @@ function App() {
   );
 }
 
-export default App;
+export default function App() { return <LanguageProvider><AppContent /></LanguageProvider>; }
