@@ -1,5 +1,5 @@
 import { Button } from "../button";
-import "/src/components/button/style.css";
+import "../button/style.css";
 import { useLanguage } from "../../i18n";
 
 export const Form = ({ submit, format, setFormat }) => {
@@ -26,12 +26,15 @@ export const Form = ({ submit, format, setFormat }) => {
           <input
             id="input__number"
             type="number"
+            min="0.01"
+            step="0.01"
+            inputMode="decimal"
             placeholder="1"
             value={format.value}
             onChange={(event) =>
               setFormat({
                 ...format,
-                value: Number(event.target.value),
+                value: event.target.value,
               })
             }
           />
@@ -41,7 +44,6 @@ export const Form = ({ submit, format, setFormat }) => {
           <select
             name="type"
             id="select__type"
-            type="text"
             value={format.type}
             onChange={(event) =>
               setFormat({
