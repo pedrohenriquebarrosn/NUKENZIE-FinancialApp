@@ -34,12 +34,11 @@ export const Dashboard = ({
             </>
           ) : (
             <ul>
-              {listTransactions.map((transaction, index) => (
+              {listTransactions.map((transaction) => (
                 <Card
                   transaction={transaction}
-                  listTransactions={listTransactions}
                   setListTransactions={setListTransactions}
-                  key={index}
+                  key={transaction.id}
                 />
               ))}
             </ul>
