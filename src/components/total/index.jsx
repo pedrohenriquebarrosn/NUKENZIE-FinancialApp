@@ -1,4 +1,6 @@
 import { useLanguage } from "../../i18n";
+import { formatBRL } from "../../finance";
+
 export const TotalValue = ({ totalMoney }) => {
   const { t, lang } = useLanguage();
   return (
@@ -7,7 +9,7 @@ export const TotalValue = ({ totalMoney }) => {
         <h4>{t("Valor total:")}</h4>
         <p>{t("O valor se refere ao saldo")}</p>
       </div>
-      <h3>{new Intl.NumberFormat(lang === "pt" ? "pt-BR" : "en-US", { style: "currency", currency: "BRL" }).format(totalMoney)}</h3>
+      <h3>{formatBRL(totalMoney, lang)}</h3>
     </div>
   );
 };
