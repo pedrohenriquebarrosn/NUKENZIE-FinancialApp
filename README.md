@@ -1,11 +1,10 @@
-
 # NuKenzie — Personal Finance Tracker
 
 An educational React application for tracking income and expenses through a simple financial dashboard. Developed as part of my Full Stack Web Development training at **Kenzie Academy Brasil**.
 
-**[Live Demo](https://entrega-nukenzie-pedro-8nvfucdqj-pedrohenriquebarrosn.vercel.app/)**
+**[▶ See Project Live ↗](https://entrega-nukenzie-pedro-g9tk-iqgcbph2g.vercel.app/)** — updated preview.
 
-**Demo check (11 October 2026):** The project owner reports that the hosted application opens and that adding and removing transactions work in the browser. This is a user-reported manual check, not an independent or automated end-to-end test.
+**Version note:** This live preview uses [`review/i18n-pt-en-20261013`](https://github.com/pedrohenriquebarrosn/NUKENZIE-FinancialApp/tree/review/i18n-pt-en-20261013). The default `master` branch may differ until changes are merged. Transactions are browser-session state, not a persistent bank account or backend.
 
 ## Overview
 
