@@ -1,14 +1,16 @@
 import { Button } from "../button";
-import "/src/components/button/style.css";
+import "../button/style.css";
+import { useLanguage } from "../../i18n";
 
 export const Form = ({ submit, format, setFormat }) => {
+  const { t } = useLanguage();
   return (
     <form className="form__section" onSubmit={submit}>
-      <label htmlFor="input__text">Descrição</label>
+      <label htmlFor="input__text">{t("Descrição")}</label>
       <input
         id="input__text"
         type="text"
-        placeholder="Digite aqui sua descrição"
+        placeholder={t("Digite aqui sua descrição")}
         value={format.description}
         onChange={(event) =>
           setFormat({
@@ -17,29 +19,31 @@ export const Form = ({ submit, format, setFormat }) => {
           })
         }
       />
-      <span className="example">Ex: Compra de roupas</span>
+      <span className="example">{t("Ex: Compra de roupas")}</span>
       <div className="div__values">
         <div className="column">
-          <label htmlFor="input__number">Valor</label>
+          <label htmlFor="input__number">{t("Valor")}</label>
           <input
             id="input__number"
             type="number"
+            min="0.01"
+            step="0.01"
+            inputMode="decimal"
             placeholder="1"
             value={format.value}
             onChange={(event) =>
               setFormat({
                 ...format,
-                value: Number(event.target.value),
+                value: event.target.value,
               })
             }
           />
         </div>
         <div className="column">
-          <label htmlFor="select__type">Tipo de valor</label>
+          <label htmlFor="select__type">{t("Tipo de valor")}</label>
           <select
             name="type"
             id="select__type"
-            type="text"
             value={format.type}
             onChange={(event) =>
               setFormat({
@@ -48,14 +52,14 @@ export const Form = ({ submit, format, setFormat }) => {
               })
             }
           >
-            <option value="">Selecione</option>
-            <option value="Entrada">Entrada</option>
-            <option value="Despesa">Depesa</option>
+            <option value="">{t("Selecione")}</option>
+            <option value="Entrada">{t("Entrada")}</option>
+            <option value="Despesa">{t("Despesa")}</option>
           </select>
         </div>
       </div>
       <Button className={"button"} type="submit">
-        Inserir valor
+        {t("Inserir valor")}
       </Button>
     </form>
   );
