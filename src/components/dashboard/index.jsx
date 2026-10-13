@@ -21,7 +21,7 @@ export const Dashboard = ({
       <main className="main container">
         <section className="section__form">
           <Form submit={submit} format={format} setFormat={setFormat} />
-          {totalMoney == 0 ? <></> : <TotalValue totalMoney={totalMoney} />}
+          {listTransactions.length > 0 && <TotalValue totalMoney={totalMoney} />}
         </section>
         <aside className="aside__list">
           <h5 className="resume">{t("Resumo financeiro")}</h5>
@@ -34,12 +34,11 @@ export const Dashboard = ({
             </>
           ) : (
             <ul>
-              {listTransactions.map((transaction, index) => (
+              {listTransactions.map((transaction) => (
                 <Card
                   transaction={transaction}
-                  listTransactions={listTransactions}
                   setListTransactions={setListTransactions}
-                  key={index}
+                  key={transaction.id}
                 />
               ))}
             </ul>
