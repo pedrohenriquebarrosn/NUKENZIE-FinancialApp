@@ -361,3 +361,10 @@
     width: 25%;
   }
 }
+
+/* Language selector is available on the landing and dashboard screens. */
+.language-switcher{position:fixed;top:12px;right:18px;z-index:1000;display:flex;gap:4px;padding:4px;border-radius:9px;background:#fff;border:1px solid #dee2e6;box-shadow:0 2px 18px #0002}
+.language-switcher button{min-width:44px;min-height:38px;padding:6px 10px;border:0;border-radius:6px;color:#343a40;background:transparent;font-weight:800;cursor:pointer}
+.language-switcher button[aria-pressed="true"]{background:#fd377e;color:#fff}
+.language-switcher button:focus-visible{outline:2px solid #fd377e;outline-offset:2px}
+@media(max-width:600px){.language-switcher{top:6px;right:6px}.language-switcher button{min-width:38px;min-height:35px;padding:4px 7px}}
