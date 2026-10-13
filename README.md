@@ -2,7 +2,7 @@
 
 **A streamlined React dashboard for tracking income, expenses, and available balance.**
 
-[**↗ See live preview**](https://entrega-nukenzie-pedro-g9tk-iqgcbph2g.vercel.app/) · [**↗ Code on GitHub**](https://github.com/pedrohenriquebarrosn/NUKENZIE-FinancialApp/tree/review/i18n-pt-en-20261013)
+[**↗ See live preview**](https://entrega-nukenzie-pedro-g9tk-iqgcbph2g.vercel.app/) · [**↗ Code on GitHub**](https://github.com/pedrohenriquebarrosn/NUKENZIE-FinancialApp)
 
 ## Overview
 
@@ -23,12 +23,11 @@ React 18 · JavaScript · Vite · CSS · React Hooks
 
 ## Explore and run locally
 
-The live preview reflects [the updated implementation branch](https://github.com/pedrohenriquebarrosn/NUKENZIE-FinancialApp/tree/review/i18n-pt-en-20261013). The default `master` branch is retained as an earlier project version.
+The default `master` branch now contains the reviewed source and regression tests. The hosted preview is a separate deployment; verify its commit before assuming it contains the latest fixes.
 
 ```bash
 git clone https://github.com/pedrohenriquebarrosn/NUKENZIE-FinancialApp.git
 cd NUKENZIE-FinancialApp
-git switch review/i18n-pt-en-20261013
 npm install
 npm run dev
 ```
