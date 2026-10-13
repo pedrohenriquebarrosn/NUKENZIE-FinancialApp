@@ -22,6 +22,7 @@ const dictionary = {
   "Você ainda não possui nenhum lançamento": "You don't have any transactions yet",
   "Listas vazias": "Empty transaction list",
   "Lixinho": "Delete transaction",
+  "Excluir lançamento": "Delete entry",
   "Valor total:": "Current balance:",
   "O valor se refere ao saldo": "Balance from your transactions",
   "Preencha todos os campos": "Please complete every field",
