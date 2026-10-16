@@ -4,6 +4,10 @@
 
 [**↗ See live preview**](https://entrega-nukenzie-pedro-g9tk-iqgcbph2g.vercel.app/) · [**↗ Code on GitHub**](https://github.com/pedrohenriquebarrosn/NUKENZIE-FinancialApp)
 
+**Project status:** Released bilingual finance tracker on the default branch, with passing domain and browser checks. [Verification](https://github.com/pedrohenriquebarrosn/NUKENZIE-FinancialApp/actions/runs/38476445682).
+
+**More work:** [Professional Portfolio 2026](https://portfolio-pedro-barros-2026-review.vercel.app/en) · [Versão em português](https://portfolio-pedro-barros-2026-review.vercel.app/pt)
+
 ## Overview
 
 NuKenzie is an interactive financial-tracking project built during Full Stack training and refined as a bilingual portfolio demonstration. It focuses on clear data entry, predictable state updates, and immediate financial feedback.
@@ -23,7 +27,7 @@ React 18 · JavaScript · Vite · CSS · React Hooks
 
 ## Explore and run locally
 
-The default `master` branch now contains the reviewed source and regression tests. The hosted preview is a separate deployment; verify its commit before assuming it contains the latest fixes.
+The default `master` branch now contains the reviewed source and regression tests. The linked application provides the published interactive preview; the reviewed source and regression tests are available on the default branch.
 
 ```bash
 git clone https://github.com/pedrohenriquebarrosn/NUKENZIE-FinancialApp.git
